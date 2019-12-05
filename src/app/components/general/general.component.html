@@ -1,0 +1,26 @@
+<div class='general-block'>
+  <div class='input-block' *ngIf="!changeBlocks && !isLodaing">
+    <button class="back-btn" (click)="onBack()">Back</button>
+    <form [formGroup]="inputForm" (ngSubmit)="onGetWeather(inputCity)">
+      <p>Enter the City:</p>
+      <input
+        type="text"
+        class='inputBlockInput'
+        #inputCity
+        formControlName="weatherInput">
+        <span *ngIf="!inputForm.get('weatherInput').valid && inputForm.get('weatherInput').touched">Please, enter a valid city name</span>
+      <button
+        class="block-btn"
+        type="submit"
+        [disabled]="!inputForm.get('weatherInput').valid">Show Weater</button>
+    </form>
+  </div>
+  <app-weather *ngIf="changeBlocks && !isLodaing" [weatherInfo]="weatherInfo"></app-weather>
+  <p *ngIf="isLodaing && !error">Loading...</p>
+  <div *ngIf="error">
+    <h2 style="text-align: center;">An error occured!</h2>
+    <p>{{ error }}</p>
+    <button class="block-btn" (click)="onHandleError()">Okay</button>
+  </div>
+</div>
+<button class="block-btn clear-btn" (click)="onClear()" *ngIf="changeBlocks">Clear</button>

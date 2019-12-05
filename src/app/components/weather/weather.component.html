@@ -1,0 +1,13 @@
+<div>
+  <div class="city-name">{{ weatherInfo.city }}</div>
+  <div class='temperature'>{{ weatherInfo.temperature }}</div>
+  <div class="details-and-img">
+    <div class='details'>
+      <p>{{ weatherInfo.details.state }}</p>
+      <p>{{ weatherInfo.details.pressure }}</p>
+      <p>{{ weatherInfo.details.humidity }}</p>
+      <p>{{ weatherInfo.details.clouds }}</p>
+    </div>
+    <img [src]="weatherInfo.image">
+  </div>
+</div>
