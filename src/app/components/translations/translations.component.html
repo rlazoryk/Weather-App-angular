@@ -1,0 +1,101 @@
+<div class='general-block'>
+  <button class="back-btn" (click)="onBack()">{{ translation.staticText['BACK_BTN']}}</button>
+  <div class="translations">
+      <form [formGroup]="translationsForm" (ngSubmit)="onSaveTranslations()">
+        <ng-container *ngFor="let key of test | keyvalue">
+            <label>{{key.key}}</label>
+            <input
+              type="text"
+              formControlName="{{key.key}}"
+              >
+
+        </ng-container>
+          <!-- <label>PAGE_TITLE:</label>
+          <input
+            type="text"
+            formControlName="page_title"
+            [(ngModel)]="this.translation.staticText['PAGE_TITLE']"><br>
+          <label>FORM_TITLE:</label>
+          <input
+            type="text"
+            formControlName="form_title"
+            [(ngModel)]="this.translation.staticText['FORM_TITLE']"><br>
+          <label>BACK_BTN:</label>
+          <input
+            type="text"
+            formControlName="back_btn"
+            [(ngModel)]="this.translation.staticText['BACK_BTN']"><br>
+          <label>SEARCH_BTN:</label>
+          <input
+            type="text"
+            formControlName="search_btn"
+            [(ngModel)]="this.translation.staticText['SEARCH_BTN']"><br>
+          <label>GENERAL:</label>
+          <input
+            type="text"
+            formControlName="general"
+            [(ngModel)]="this.translation.staticText['GENERAL']"><br>
+          <label>PRESSURE:</label>
+          <input
+            type="text"
+            formControlName="pressure"
+            [(ngModel)]="this.translation.staticText['PRESSURE']"><br>
+          <label>HUMIDITY:</label>
+          <input
+            type="text"
+            formControlName="humidity"
+            [(ngModel)]="this.translation.staticText['HUMIDITY']"><br>
+          <label>CLOUDS:</label>
+          <input
+            type="text"
+            formControlName="clouds"
+            [(ngModel)]="this.translation.staticText['CLOUDS']"><br>
+          <label>LOADING:</label>
+          <input
+            type="text"
+            formControlName="loading"
+            [(ngModel)]="this.translation.staticText['LOADING']"><br>
+          <label>OKAY:</label>
+          <input
+            type="text"
+            formControlName="okay"
+            [(ngModel)]="this.translation.staticText['OKAY']"><br>
+          <label>CLEAR:</label>
+          <input
+            type="text"
+            formControlName="clear"
+            [(ngModel)]="this.translation.staticText['CLEAR']"><br>
+          <label>ERROR:</label>
+          <input
+            type="text"
+            formControlName="error"
+            [(ngModel)]="this.translation.staticText['ERROR']"><br>
+          <label>WELCOME:</label>
+          <input
+            type="text"
+            formControlName="welcome"
+            [(ngModel)]="this.translation.staticText['WELCOME']"><br>
+          <label>START:</label>
+          <input
+            type="text"
+            formControlName="start"
+            [(ngModel)]="this.translation.staticText['START']"><br>
+          <label>CHANGE_TRANSLATION_BTN:</label>
+          <input
+            type="text"
+            formControlName="change_translation_btn"
+            [(ngModel)]="this.translation.staticText['CHANGE_TRANSLATION_BTN']"><br>
+          <input
+            type="text"
+            formControlName="no_city"
+            [(ngModel)]="this.translation.staticText['NO_CITY']"><br>
+          <input
+            type="text"
+            formControlName="invalid_data"
+            [(ngModel)]="this.translation.staticText['INVALID_DATA']"><br> -->
+          <button
+            type="submit"
+            class="block-btn">{{ test.OKAY }}</button>
+        </form>
+  </div>
+</div>

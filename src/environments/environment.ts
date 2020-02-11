@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'https://api.openweathermap.org/data/2.5'
+  apiUrl: 'https://api.openweathermap.org/data/2.5',
+  translationsUrl: 'https://localhost:5001/Translations/'
 };
 
 /*

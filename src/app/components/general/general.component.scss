@@ -24,6 +24,11 @@
   border: 2px solid #008CBA;
 }
 
+.block-btn:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
 .input-block{
   display: flex;
   flex-direction: column;
@@ -60,11 +65,6 @@
   margin: 5px 25% auto;
 }
 
-.block-btn:hover {
-  background-color: #008CBA;
-  color: white;
-}
-
 @media(max-width: 800px){
   .general-block{
     width: 80%;
@@ -76,6 +76,10 @@
 
   .block-btn{
     font-size: 4vw;
+  }
+
+  .back-btn {
+    font-size: 10px;
   }
 
   .clear-btn{

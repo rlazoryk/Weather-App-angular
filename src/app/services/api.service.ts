@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import {EventEmitter, Injectable} from '@angular/core';
 import { Subject } from 'rxjs';
 import { environment } from 'src/environments/environment';
@@ -13,7 +13,7 @@ export class ApiService {
 
   constructor(private http: HttpClient) {}
 
-  makeRequest(city: string) {
+  makeWeatherRequest(city: string) {
     this.city = city;
     return this.http.get(this.apiUrl + '/weather?q=' + city + '&appid=017f85cbc4dda5a17ed09430b5ee378f');
   }

@@ -1,5 +1,11 @@
 <header>
-  <h1>Weater App</h1>
+  <h1>{{ translation.staticText['PAGE_TITLE'] }}</h1>
   <h1 *ngIf="showCity">{{ city }}</h1>
+  <form [formGroup]="selectForm">
+      <select (change)="changeLanguage()" formControlName="selectedLanguage">
+        <option *ngFor="let lang of languages">{{ lang }}</option>
+      </select><br>
+  </form>
 </header>
+
 

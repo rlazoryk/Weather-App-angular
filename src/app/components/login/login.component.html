@@ -1,0 +1,18 @@
+<div class='general-block'>
+    <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+      <p>Login:</p>
+      <input
+        type="text"
+        #inputCity
+        formControlName="loginInput">
+        <span *ngIf="!loginForm.get('loginInput').valid && loginForm.get('weatherInput').touched">Please, enter a valid login</span>
+      <input
+        type="text"
+        class="inputBlockInput"
+        formControlName="passwordInput">
+      <button
+        class="block-btn"
+        type="submit"
+        [disabled]="!loginForm.get('loginInput').valid">Log in</button>
+    </form>
+</div>

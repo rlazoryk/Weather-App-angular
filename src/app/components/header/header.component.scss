@@ -4,7 +4,15 @@ header {
   h1{
     text-align: center;
     font-size: 4vw;
-    color: rgb(255, 165, 0);
+    color: #ffa500;
+    flex-grow: 2;
+  }
+  select {
+    height: 30px;
+    width: 60px;
+    align-self: flex-end;
+    flex-grow: 0;
+    font-size: 20px;
   }
 }
 
@@ -13,5 +21,11 @@ header {
     h1 {
       font-size: 6vw;
     }
+    select {
+      height: 15px;
+      width: 40px;
+      font-size: 10px;
+    }
   }
 }
+

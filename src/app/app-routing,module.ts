@@ -3,6 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { GeneralComponent } from './components/general/general.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { LoginComponent } from './components/login/login.component';
+import { TranslationsComponent } from './components/translations/translations.component';
 
 const appRoutes: Routes = [
   {
@@ -10,6 +12,12 @@ const appRoutes: Routes = [
   },
   {
     path: 'weather', component: GeneralComponent
+  },
+  {
+    path: 'login', component: LoginComponent
+  },
+  {
+    path: 'translations', component: TranslationsComponent
   },
   {
     path: 'not-found', component: PageNotFoundComponent
